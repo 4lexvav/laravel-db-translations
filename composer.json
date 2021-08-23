@@ -1,0 +1,42 @@
+{
+    "name": "4lexvav/laravel-db-translations",
+    "description": "Simple database implementation of Laravel Translations",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "translations",
+        "db_translations"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "4lexvav",
+            "email": "4lexvav@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "illuminate/support": "^5.5|^6|^7|^8",
+        "illuminate/database": "^5.5|^6|^7|^8",
+        "illuminate/translation": "^5.5|^6|^7|^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vav\\Translation\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vav\\Translation\\DBTranslationServiceProvider"
+            ],
+            "aliases": {
+                "DBLang": "Vav\\Translation\\DBLang"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
