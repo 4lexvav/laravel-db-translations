@@ -3,7 +3,7 @@ Laravel Database Translations
 ---
 
 This package provides simple database implementation of Laravel' Loader interface used for translations
-and a few helper methods that can be exploit to use translations stored in your DB provider.
+and a few helper methods that can be exploit to use translations stored in your DB.
 
 ### Installation
 `require 4lexvav/laravel-db-translations`
@@ -25,4 +25,9 @@ __db('some.key', ['Placeholder' => 'value'])
 
 ```
 trans_db('some.key', ['Placeholder' => 'value'])
+```
+
+
+```
+trans_choice_db('some.key', count($array), ['Placeholder' => 'value'])
 ```
