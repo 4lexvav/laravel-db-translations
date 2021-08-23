@@ -30,6 +30,6 @@ class Translator extends IlluminateTranslator
             }
         }
 
-        return $this->makeReplacements($line !== null ?: $key, $replace);
+        return $this->makeReplacements($line === null ? $key : $line, $replace);
     }
 }
