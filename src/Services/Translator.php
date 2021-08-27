@@ -16,14 +16,12 @@ class Translator extends IlluminateTranslator
 
         $line = $this->loaded['*']['*'][$locale][$key] ?? null;
 
-        if (! isset($line)) {
-            list($namespace, $group, $item) = $this->parseKey($key);
-
+        if (!isset($line)) {
             $locales = $fallback ? $this->localeArray($locale) : [$locale];
 
             foreach ($locales as $locale) {
                 if (! is_null($line = $this->getLine(
-                    $namespace, $group, $locale, $item, $replace
+                    '*', '*', $locale, $key, $replace
                 ))) {
                     return $line;
                 }
